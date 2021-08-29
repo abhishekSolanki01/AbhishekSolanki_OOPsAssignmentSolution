@@ -1,9 +1,10 @@
 package model;
 
+//Determine the department (Technical, Admin, Human Resource, Legal)
 public class Department {
     private String departmentName;
 
-    public Department(String departmentName){
+    public Department(String departmentName) {
         super();
         this.departmentName = departmentName;
     }
@@ -12,9 +13,8 @@ public class Department {
         this.departmentName = departmentName;
     }
 
-    public String getDepartmentName(){
+    public String getDepartmentName() {
         return this.departmentName;
     }
 
-    
 }
