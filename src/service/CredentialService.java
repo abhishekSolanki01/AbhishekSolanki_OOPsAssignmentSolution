@@ -5,8 +5,8 @@ import model.Department;
 import model.Employee;
 
 
-//1. generate random character of length 8
-//2. generate email 
+//1. generate random character of length 8 [password]
+//2. generate email syntax (firstNamelastName@department.company.com)
 public class CredentialService {
     private char[] generatePassword(){
       String capitalCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
