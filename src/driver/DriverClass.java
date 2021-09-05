@@ -2,44 +2,39 @@ package driver;
 
 import java.util.Scanner;
 
-import model.Department;
-import model.Employee;
-import service.CredentialService;
+import model.AdminDepartment;
+import model.HrDepartment;
+import model.SuperDepartment;
+import model.TechDepartment;
 
 public class DriverClass {
 
     public static void main(String[] args) {
-        Employee employee = new Employee("Abhishek", "Solanki");
-        CredentialService credentialService = new CredentialService();
-        System.out.println("Please enter the department from the following");
-        System.out.println("1. Technical \n2. Admin \n3. HR  \n4. Legal");
+        HrDepartment HrDepartment = new HrDepartment();
+        TechDepartment TechDepartment = new TechDepartment();
+        AdminDepartment AdminDepartment = new AdminDepartment();
+        SuperDepartment superDepartment = new SuperDepartment();
 
-        Scanner scn = new Scanner(System.in);
-        int choice = scn.nextInt();
+        System.out.print("Welcome to ");
+        System.out.println( AdminDepartment.departmentName());
+        System.out.println(AdminDepartment.getTodaysWork());
+        System.out.println(AdminDepartment.getWorkDeadline());
+        System.out.println(AdminDepartment.isTodayAHoliday() + "\n");
 
-        switch (choice) {
-            case 1:
-                Department department1 = new Department("tech");
-                credentialService.showCredential(employee, department1);
-                break;
-            case 2:
-                Department department2 = new Department("admin");
-                credentialService.showCredential(employee, department2);
-                break;
+        System.out.print("Welcome to ");
+        System.out.println(HrDepartment.departmentName());
+        System.out.println(HrDepartment.getTodaysWork());
+        System.out.println(HrDepartment.getWorkDeadline());
+        System.out.println(HrDepartment.isTodayAHoliday()+ "\n");
 
-            case 3:
-                Department department3 = new Department("hr");
-                credentialService.showCredential(employee, department3);
-                break;
+        System.out.print("Welcome to ");
+        System.out.println(TechDepartment.departmentName());
+        System.out.println(TechDepartment.getTodaysWork());
+        System.out.println(TechDepartment.getWorkDeadline());
+        System.out.println(TechDepartment.isTodayAHoliday()+ "\n");
 
-            case 4:
-                Department department4 = new Department("legal");
-                credentialService.showCredential(employee, department4);
-                break;
+        
 
-            default:
-                System.out.println("Please enter number between 1 to 4");
-
-        }
     }
+
 }
