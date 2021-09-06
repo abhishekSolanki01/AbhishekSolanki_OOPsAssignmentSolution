@@ -21,7 +21,7 @@ public class SuperDepartment {
         return "Nil";
     }
 
-    public static String isTodayAHoliday() {
+    public String isTodayAHoliday() {
         return "Today is not a holiday";
     }
 
